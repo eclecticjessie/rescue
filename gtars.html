@@ -25,43 +25,47 @@
 							if (window.location.hash.length == webSessionIdLength + 1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
 					}
 			</script>
-	<title>Channel Sessions Demo in LogMeIn Rescue</title>
+	<title>GTARS: Custom PIN Code Page</title>
 			<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<nav class="header">
-	  <h3><img src="https://cdn.glitch.com/324e9131-13e1-4a81-a4bd-a5071dd680ce%2FLMI_Rescue_Blue_HEX.png?v=1627336409623" alt="Rescue Logo" width="200px"></h3>
-
-					<a class="active" href="index.html">Channel Link, Channel Link with Name, & Custom Live Support Form</a>
+	  <h3><img src="https://cdn.glitch.com/324e9131-13e1-4a81-a4bd-a5071dd680ce%2FGTARS.png?v=1627336300853" alt="GoToAssist Logo" width="200px"></h3>
+					<a href="index.html">Channel Link, Channel Link with Name, & Custom Live Support Form</a>
 			<a href="channel.html">Custom Live Support Forms with self-hosted Instant Chat</a>
 			<a href="123.html">Custom LogMeIn123.com form</a>
 			<a href="123chat.html">Custom LogMeIn123.com form with self-hosted Instant Chat</a>
-			<a href="gtars.html">GTARS: Custom PIN Code Page</a>
+			<a class="active" href="gtars.html">GTARS: Custom PIN Code Page</a>
 	</nav>
 	<div class="content">
-	<p><h3><a href="https://secure.logmeinrescue.com/Customer/Download.aspx?EntryID=4580156">Channel Link</a></h3>
-	<em>Execuetable immediately downloads.  End-user launches it, and is put into the queue with any available technician in the technician group associated with the channel to pick up.</em>
-			</p>
-		</div>
-			<div class="content"><h3><a href="https://secure.logmeinrescue.com/Customer/Download.aspx?ChannelName=PC&CompanyID=3099805">Channel Link with Name</a></h3>
-			<em>	The same as the above link, but includes the Channel Name in the link (helpful if you are working with multiple channels).  For example, this is the <strong>PC Channel</strong>, and if you look at the link URL, this information is included.</em>
-			</div>
-				<div class="content">
-				<h3>Custom Live Support Forms</h3><BR>
-						<form name="channel4580156" action="https://secure.logmeinrescue.com/Customer/Download.aspx" method="post">
-					    <table>
-					        <tr><td>Please enter your name: </td><td><input type="text" name="name" maxlength="64" /></td></tr>
-					        <tr><td>Department: </td><td><input type="text" name="comment1" maxlength="512" /></td></tr>
-					        <tr><td>Custom Field 2: </td><td><input type="text" name="comment2" maxlength="512" /></td></tr>
-					        <tr><td>Custom Field 3: </td><td><input type="text" name="comment3" maxlength="256" /></td></tr>
-					        <tr><td>Custom Field 4: </td><td><input type="text" name="comment4" maxlength="64" /></td></tr>
-					        <tr><td>Custom Field 5: </td><td><input type="text" name="comment5" maxlength="64" /></td></tr>
-					    </table>
-					    <input type="submit" value="PC" />
-					    <input type="hidden" name="EntryID" value="4580156" />
-					    <input type="hidden" name="tracking0" maxlength="64" /> <!-- optional -->
-					    <input type="hidden" name="language" maxlength="5" /> <!-- optional -->
-					</form><br>
-				<em>This form allows the end-user to enter information before starting the session.  The custom fields can be customized within the HTML.  The button states the channel name.</em></div>
+	<p><h3>Create a customized support portal (attended sessions)</h3>
+		<body bgcolor="silver" onLoad="document.forms[0].name.focus();">
+		<FORM METHOD="POST"
+		ACTION="https://fastsupport.gotoassist.com/servlet/download/customerDownload"
+		name="ssid">
+		<TABLE BORDER="0">
+		  <TR>
+		    <TD>Your name:</TD>
+		    <TD><INPUT TYPE="TEXT" NAME="name" SIZE="20"></TD>
+		  </TR>
+		  <TR>
+		    <TD>Type the 9 digit number:</TD>
+		    <TD><INPUT TYPE="TEXT" NAME="supportSessionId" SIZE="20"></TD>
+		  </TR>
+		  <TR>
+		    <TD></TD>
+		    <TD><INPUT TYPE="SUBMIT" VALUE="Connect"></TD>
+		  </TR>
+		</TABLE>
+		</FORM>
+				<em>
+				This method creates a form on a new web page, which you can use as a custom alternative to the standard connection channels.  The form then redirects it to be handled by the support portal, which completes the session connection. This web page gives you the ability to use your logo and label the fields as you choose.  <a href="https://support.logmeininc.com/gotoassist-remote-support/help/customize-support-portals-g2ars020004#Create">Grab the code and learn more here.</a></em></div>
+<div class="content">
+	<h3>Embed a customized support portal on a third-party website (attended sessions)</h3>
+	<iframe src="https://FastSupport.gotoassist.com" height="230px" width="80%">
+	your browser does not support IFRAMEs</iframe>
+	<br><em>This method creates a "Connect" box embedded directly on your website.  <a href="https://support.logmeininc.com/gotoassist-remote-support/help/customize-support-portals-g2ars020004#Create">You can learn more and grab the code here.</a></em>
+</div>
+
 				<div class="footer">This site is for demonstration purposes only and will not connect you to a technician.</div></body>
 	</html>

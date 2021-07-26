@@ -1,0 +1,89 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+			<script type="text/javascript" src="https://secure.logmeinrescue.com/InstantChat/InstantChat.aspx"></script>
+			<script type="text/javascript">
+					function loadInstantChat(){
+							var ICLoader = new RescueInstantChatLoader();
+							ICLoader.ICContainer = "ICContainer";
+							ICLoader.HostedCSS = "https://secure.logmeinrescue.com/InstantChat/Standard/InstantChat.css";
+							ICLoader.HostedLanguagesForChatOnlyMode = "https://secure.logmeinrescue.com/InstantChat/LanguagesForChatOnlyMode.js";
+							ICLoader.HostedLanguagesForAppletMode = "https://secure.logmeinrescue.com/InstantChat/LanguagesForAppletMode.js";
+							ICLoader.EntryID = "4580156";
+							ICLoader.Name = document.getElementById("Name").value; /* optional */
+							ICLoader.Comment1 = document.getElementById("Comment1").value; /* optional */
+							ICLoader.Comment2 = document.getElementById("Comment2").value; /* optional */
+							ICLoader.Comment3 = document.getElementById("Comment3").value; /* optional */
+							ICLoader.Comment4 = document.getElementById("Comment4").value; /* optional */
+							ICLoader.Comment5 = document.getElementById("Comment5").value; /* optional */
+							ICLoader.Tracking0 = ""; /* optional */
+							ICLoader.Language = ""; /* optional */
+							ICLoader.PostMessageTargetOrigin = ""; /* optional (For implementation details, see the LogMeIn Rescue Customization and Integration Guide) */
+							ICLoader.HostedErrorHandler = function(ErrorName){} /* optional */
+							ICLoader.Start();}
+					function handleRebootOrRefresh(){
+							if ((window.location + "").indexOf("rescuewebsessionid") != -1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
+							if (window.location.hash.length == webSessionIdLength + 1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
+					}
+			</script>
+	<title>Channel Sessions Demo in LogMeIn Rescue</title>
+			<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav class="header">
+	  <h3><img src="https://cdn.glitch.com/324e9131-13e1-4a81-a4bd-a5071dd680ce%2FLMI_Rescue_Blue_HEX.png?v=1627336409623" alt="Rescue Logo" width="200px"></h3>
+					<a href="index.html">Channel Link, Channel Link with Name, & Custom Live Support Form</a>
+			<a class="active" href="channel.html">Custom Live Support Forms with self-hosted Instant Chat</a>
+			<a href="123.html">Custom LogMeIn123.com form</a>
+			<a href="123chat.html">Custom LogMeIn123.com form with self-hosted Instant Chat</a>
+			<a href="gtars.html">GTARS: Custom PIN Code Page</a>
+	</nav>
+	<div class="content">
+		<h3>Custom Live Support Forms with self-hosted Instant Chat</h3>
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		    <script type="text/javascript" src="https://secure.logmeinrescue.com/InstantChat/InstantChat.aspx"></script>
+		    <script type="text/javascript">
+		        function loadInstantChat(){
+		            var ICLoader = new RescueInstantChatLoader();
+		            ICLoader.ICContainer = "ICContainer";
+		            ICLoader.HostedCSS = "https://secure.logmeinrescue.com/InstantChat/Standard/InstantChat.css";
+		            ICLoader.HostedLanguagesForChatOnlyMode = "https://secure.logmeinrescue.com/InstantChat/LanguagesForChatOnlyMode.js";
+		            ICLoader.HostedLanguagesForAppletMode = "https://secure.logmeinrescue.com/InstantChat/LanguagesForAppletMode.js";
+		            ICLoader.EntryID = "4580156";
+		            ICLoader.Name = document.getElementById("Name").value; /* optional */
+		            ICLoader.Comment1 = document.getElementById("Comment1").value; /* optional */
+		            ICLoader.Comment2 = document.getElementById("Comment2").value; /* optional */
+		            ICLoader.Comment3 = document.getElementById("Comment3").value; /* optional */
+		            ICLoader.Comment4 = document.getElementById("Comment4").value; /* optional */
+		            ICLoader.Comment5 = document.getElementById("Comment5").value; /* optional */
+		            ICLoader.Tracking0 = ""; /* optional */
+		            ICLoader.Language = ""; /* optional */
+		            ICLoader.PostMessageTargetOrigin = ""; /* optional (For implementation details, see the LogMeIn Rescue Customization and Integration Guide) */
+		            ICLoader.HostedErrorHandler = function(ErrorName){} /* optional */
+		            ICLoader.Start();}
+		        function handleRebootOrRefresh(){
+		            if ((window.location + "").indexOf("rescuewebsessionid") != -1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
+		            if (window.location.hash.length == webSessionIdLength + 1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
+		        }
+		    </script>
+		</head>
+		<body onload="handleRebootOrRefresh();">
+		    <table>
+		        <tr><td>Please enter your name: </td><td><input id="Name" type="text" maxlength="64" /></td></tr>
+		        <tr><td>Custom Field 1: </td><td><input id="Comment1" type="text" maxlength="512" /></td></tr>
+		        <tr><td>Custom Field 2: </td><td><input id="Comment2" type="text" maxlength="512" /></td></tr>
+		        <tr><td>Custom Field 3: </td><td><input id="Comment3" type="text" maxlength="256" /></td></tr>
+		        <tr><td>Custom Field 4: </td><td><input id="Comment4" type="text" maxlength="64" /></td></tr>
+		        <tr><td>Custom Field 5: </td><td><input id="Comment5" type="text" maxlength="64" /></td></tr>
+		    </table>
+		    <input type="button" value="PC" onclick="document.getElementById('ICContainer').style.display=''; loadInstantChat();" />
+		    <div id="ICContainer" style="position: absolute; left: 0px; top: 0px; width: 400px; height: 500px; display: none"></div>
+		</body>
+		</html>
+<br><br><em>This form allows the end-user to enter information before starting the session.  The custom fields can be customized within the HTML.  Instant chat will start in this web browser, allowing the end-user and technician to chat prior to launching a full remote control session. The button states the channel name.</em></div>
+	</div>
+	<div class="footer">This site is for demonstration purposes only and will not connect you to a technician.</div></body>
+	</body>
+	</html>

@@ -1,0 +1,49 @@
+<html><head>
+	<title>Custom LogMeIn123.com Forms</title>
+			<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav class="header">
+	  <h3><img src="https://cdn.glitch.com/324e9131-13e1-4a81-a4bd-a5071dd680ce%2FLMI_Rescue_Blue_HEX.png?v=1627336409623" alt="Rescue Logo" width="200px"></h3>
+					<a href="index.html">Channel Link, Channel Link with Name, & Custom Live Support Form</a>
+			<a href="channel.html">Custom Live Support Forms with self-hosted Instant Chat</a>
+			<a  href="123.html">Custom LogMeIn123.com form</a>
+			<a class="active"href="123chat.html">Custom LogMeIn123.com form with self-hosted Instant Chat</a>
+			<a href="gtars.html">GTARS: Custom PIN Code Page</a>
+
+	</nav>
+	<div class="content">
+		<h3>Custom LogMeIn123.com form with self-hosted Instant Chat</h3>
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+		    <script type="text/javascript" src="https://secure.logmeinrescue.com/InstantChat/InstantChat.aspx"></script>
+		    <script type="text/javascript">
+		        function loadInstantChat(){
+		            var ICLoader = new RescueInstantChatLoader();
+		            ICLoader.ICContainer = "ICContainer";
+		            ICLoader.HostedCSS = "https://secure.logmeinrescue.com/InstantChat/Standard/InstantChat.css";
+		            ICLoader.HostedLanguagesForChatOnlyMode = "https://secure.logmeinrescue.com/InstantChat/LanguagesForChatOnlyMode.js";
+		            ICLoader.HostedLanguagesForAppletMode = "https://secure.logmeinrescue.com/InstantChat/LanguagesForAppletMode.js";
+		            ICLoader.PrivateCode = document.getElementById("Code").value;
+		            ICLoader.Tracking0 = ""; /* optional */
+		            ICLoader.Language = ""; /* optional */
+		            ICLoader.PostMessageTargetOrigin = ""; /* optional (For implementation details, see the LogMeIn Rescue Customization and Integration Guide) */
+		            ICLoader.HostedErrorHandler = function(ErrorName){} /* optional */
+		            ICLoader.Start();}
+		        function handleRebootOrRefresh(){
+		            if ((window.location + "").indexOf("rescuewebsessionid") != -1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
+		            if (window.location.hash.length == webSessionIdLength + 1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
+		        }
+		    </script>
+		</head>
+		<body onload="handleRebootOrRefresh();">
+		    <span>Enter your six-digit code, then click the Start Download button below </span><input id="Code" type="text" /><br />
+		    <input type="button" value="Connect to technician" onclick="document.getElementById('ICContainer').style.display=''; loadInstantChat();" />
+		    <div id="ICContainer" style="position: absolute; left: 0px; top: 0px; width: 400px; height: 500px; display: none"></div>
+		</body>
+		</html>
+<br><br><em>This method allows you to host a custom version of the LogMeIn123.com site.  Once a PIN code is provided to the end-user, they can enter it here, and be connected to a chat with the technician directly in the web browser, prior to a full session being launched.</em></div>
+<div class="footer">This site is for demonstration purposes only and will not connect you to a technician.</div></body>
+	</body>
+	</html>
